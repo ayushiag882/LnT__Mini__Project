@@ -16,17 +16,16 @@ Folder             | Description
 `4_Test_plan`      | Documents with test plans and procedures
 
 ## Contributors List and Summary
-
-PS No. |  Name   |    Features    | Issuess Raised |Issues Resolved|No Test Cases|Test Case Pass
+PS No. |  Name   |    Features    | Issues Raised |Issues Resolved|No Test Cases|Test Case Pass
 -------|---------|----------------|----------------|---------------|-------------|--------------
-`ABC` | 12345678  | Feature A, B etc    | X No     | X No   |X No   |X No     
-`DEF` | 12345678  | Feature C, D etc    | X No     | X No   |X No   |X No     
+256145 |Ayushi Agarwal | All features    | No     | No   | 5   | All    
 
 ## Challenges Faced and How Was It Overcome
 
-1. ABC
-2. BCD
-3. ...
+1. The purpose of the STUDENT MANAGEMENT SYSTEM is mainly to provide automation to schools and colleges
+2. The categories of users provided are :
+    1. Administrator: He can read or write the information about any student and can update, delete or create a new entry.
+    2. Student: He can access his entry records and check his record etc.
 4. ...
 
 ## Learning Resources
@@ -34,4 +33,5 @@ PS No. |  Name   |    Features    | Issuess Raised |Issues Resolved|No Test Case
 2. [markdownBasics](https://guides.github.com/features/mastering-markdown/)
 3. [git inspector](https://github.com/ejwa/gitinspector.git)
 4. [github workflow](https://docs.github.com/en/actions/learn-github-action)
+5. 
 
