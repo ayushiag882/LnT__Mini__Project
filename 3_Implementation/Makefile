@@ -1,31 +1,47 @@
 # Name of the project
-PROJECT_NAME = Calculator
-
-# Output directory
-BUILD = build
+PROJECT_NAME = Food
 
 # All source code files
-SRC = project_main.c\
-src/calculator_operations.c
+SRC = src\bill.c src\showLogo.c \
+src\foodlist.c src\InsertAtEnd.c src\main.c src\order.c
+
+# Output Files
+BUILD = build
 
 # All test source files
-TEST_SRC = src/calculator_operations.c\
-test/test_calculator_operations.c\
+
+TEST_SRC = src\bill.c src\showLogo.c \
+src\foodlist.c src\InsertAtEnd.c src\main.c src\order.c \
+test/test_Food_Order_Mgmt.c \
 unity/unity.c\
 
-TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).out
+ifdef OS
+   RM = del /q
+   FixPath = $(subst /,\,$1)
+   EXEC = exe
+else
+   ifeq ($(shell uname), Linux)
+      RM = rm -rf
+      FixPath = $1
+	  EXEC = out
+   endif
+endif
+
+
+TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).$(EXEC)
 
 # All include folders with header files
 INC	= -Iinc\
--Iunity\
+-Iunity
 
 #Library Inlcudes
 #if working with CUnit 
 #INCLUDE_LIBS = -lcunit
-INCLUDE_LIBS =
+
+#INCLUDE_LIBS =
 
 # Project Output name
-PROJECT_OUTPUT = $(BUILD)/$(PROJECT_NAME).out
+PROJECT_OUTPUT = $(PROJECT_NAME).$(EXEC)
 
 # Document files
 DOCUMENTATION_OUTPUT = documentation/html
@@ -37,29 +53,32 @@ $(PROJECT_NAME):all
 .PHONY: run clean test doc all
 
 all: $(SRC) $(BUILD)
-	gcc $(SRC) $(INC) -o $(PROJECT_OUTPUT).out
+	gcc $(call FixPath,$(SRC)) $(INC) -o $(call FixPath,$(BUILD)/$(PROJECT_NAME).$(EXEC))
 
 # Call `make run` to run the application
-run:$(PROJECT_NAME)
-	./$(PROJECT_OUTPUT).out
+run: all
+	$(call FixPath,$(BUILD)/$(PROJECT_NAME).$(EXEC))
 
 # Document the code using Doxygen
-#doc:
-#	make -C ./documentation
+doc:
+	make -C ./documentation
 
 # Build and run the unit tests
+
 test:$(BUILD)
 	gcc $(TEST_SRC) $(INC) -o $(TEST_OUTPUT)
-	./$(TEST_OUTPUT)
+	$(call FixPath,$(BUILD)/$(TEST_OUTPUT).$(EXEC))
+
 #Coverage
 coverageCheck:$(BUILD)
 	g++ -fprofile-arcs -ftest-coverage -fPIC -O0 $(TEST_SRC) $(INC) -o $(TEST_OUTPUT)
-	./$(TEST_OUTPUT)
-
-# Remove all the built files, invoke by `make clean`
-clean:
-	rm -rf $(BUILD) $(DOCUMENTATION_OUTPUT)
+	$(call FixPath,$(BUILD)/$(TEST_OUTPUT).$(EXEC))
 
 # Create new build folder if not present
 $(BUILD):
 	mkdir build
+
+# Remove all the built files, invoke by `make clean`
+clean:
+	$(RM) $(call FixPath,$(BUILD)/*)
+	rmdir $(BUILD)
