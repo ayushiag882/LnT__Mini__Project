@@ -26,7 +26,7 @@ PS No. |  Name   |    Features    | Issues Raised |Issues Resolved|No Test Cases
 2. The categories of users provided are :
     1. Administrator: He can read or write the information about any student and can update, delete or create a new entry.
     2. Student: He can access his entry records and check his record etc.
-4. ...
+
 
 ## Learning Resources
 1. [markdownCheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
