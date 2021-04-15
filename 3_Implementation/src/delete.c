@@ -3,7 +3,7 @@ error_t Delete(int rollnumber)
 
 {
 
-    struct Student * temp1 = head;
+        struct Student * temp1 = head;
 	struct Student * temp2 = head; 
 	while(temp1!=NULL){
 		
