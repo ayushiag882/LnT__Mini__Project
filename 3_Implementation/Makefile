@@ -11,7 +11,7 @@ BUILD = build
 # All test source files
 
 TEST_SRC = src/delete.c src/display.c \
-src/insert.c src/main.c src/search.c src/update.c \
+src/insert.c  src/search.c src/update.c \
 test/student_test.c \
 unity/unity.c\
 
