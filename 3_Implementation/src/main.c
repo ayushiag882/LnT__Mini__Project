@@ -1,5 +1,7 @@
 #include"header.h"
 
+/*
+
 extern struct Student
 {
     int rollnumber;
@@ -9,9 +11,10 @@ extern struct Student
     struct Student *next;
     
 }* head=NULL;
-int main(){
 
- 
+*/
+
+int main(){
 
     int choice;
     char name[100];
