@@ -33,7 +33,7 @@ typedef struct Student
     float percentage;
     struct Student *next;
     
-}* head;
+}head;
 
 /**
  * @brief DELETE RECORD
