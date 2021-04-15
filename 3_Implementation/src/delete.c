@@ -26,7 +26,7 @@ error_t Delete(int rollnumber)
 			}
 			
 			printf("Record Successfully Deleted !!!\n");
-			return;
+			return SUCCESS;
 			
 		}
 		temp2 = temp1;
@@ -34,6 +34,6 @@ error_t Delete(int rollnumber)
 		
 	}
 	printf("Student with roll number %d is not found !!!\n", rollnumber);
-	return SUCCESS;
+	
 	
 }
