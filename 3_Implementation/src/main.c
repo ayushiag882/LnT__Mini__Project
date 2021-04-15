@@ -23,17 +23,17 @@ int main(){
                 scanf("%s", phone);
                 printf("Enter percentage: ");
                 scanf("%f", &percentage);
-               void insert(rollnumber, name, phone, percentage);
+               insert(rollnumber, name, phone, percentage);
                 break;
             case 2:
                 printf("Enter roll number to search: ");
                 scanf("%d", &rollnumber);
-               void search(rollnumber);
+               search(rollnumber);
                 break;
             case 3:
                 printf("Enter roll number to delete: ");
                 scanf("%d", &rollnumber);
-               void  Delete(rollnumber);
+                 Delete(rollnumber);
                 break;
             case 4:
                 printf("Enter roll number to update: ");
@@ -41,7 +41,7 @@ int main(){
                 update(rollnumber);
                 break;
             case 5:
-               void display();
+                display();
                 break;
         }
         

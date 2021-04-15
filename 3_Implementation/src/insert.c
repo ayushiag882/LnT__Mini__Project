@@ -2,7 +2,7 @@
 
 
 #include "header.h"
-void insert(int rollnumber, char* name, char* phone, float percentage)
+error_t insert(int rollnumber, char* name, char* phone, float percentage)
 {
 	
     struct Student * student = (struct Student *) malloc(sizeof(struct Student));
@@ -23,5 +23,6 @@ void insert(int rollnumber, char* name, char* phone, float percentage)
 		student->next = head;
 		head = student;
 	}
+	return SUCCESS;
 	
 }

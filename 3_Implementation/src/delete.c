@@ -1,5 +1,5 @@
 #include "header.h"
-void Delete(int rollnumber)
+error_t Delete(int rollnumber)
 
 {
 
@@ -34,5 +34,6 @@ void Delete(int rollnumber)
 		
 	}
 	printf("Student with roll number %d is not found !!!\n", rollnumber);
+	return SUCCESS;
 	
 }

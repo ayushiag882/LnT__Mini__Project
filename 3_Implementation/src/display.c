@@ -1,5 +1,5 @@
 #include "header.h"
-void display()
+error_t display()
 {
     struct Student * temp = head;
 	while(temp!=NULL){
@@ -11,4 +11,5 @@ void display()
 		temp = temp->next;
 		
 	}
+	return SUCCESS;
 }
