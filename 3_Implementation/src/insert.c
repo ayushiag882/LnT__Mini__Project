@@ -3,7 +3,7 @@
 error_t insert(student*h)
 {
 	student*p;
-    p = malloc(sizeof(student));
+    p = (student*)malloc(sizeof(student));
 
 	printf("Roll no.:");
 	scanf("%s", &p->rollnumber);
