@@ -1,15 +1,14 @@
 #include "header.h"
-error_t display()
+error_t display(student*h)
 {
-    struct Student * temp = head;
-	while(temp!=NULL){
-		
-		printf("Roll Number: %d\n", temp->rollnumber);
-		printf("Name: %s\n", temp->name);
-		printf("Phone: %s\n", temp->phone);
-		printf("Percentage: %0.4f\n\n", temp->percentage);
-		temp = temp->next;
-		
+	student*p;
+	for (p = h->next; p != NULL; p = p->next)
+	{
+		printf("Roll Number: %d\n", p->rollnumber);
+		printf("Name: %s\n", p->name);
+		printf("Phone: %s\n", p->phone);
+		printf("Percentage: %0.4f\n\n", p->percentage);
 	}
+
 	return SUCCESS;
 }

@@ -16,16 +16,20 @@ void tearDown()
 
 
 void test_DISPLAY(){
-  
-  TEST_ASSERT_EQUAL(SUCCESS,display());
+  student h = {25, "Ayushi", "3423423", 90.4};
+  TEST_ASSERT_EQUAL(SUCCESS,display(&h));
 }
 
 
 void test_INSERT(){
-     
-      TEST_ASSERT_EQUAL(SUCCESS,insert(67, "AYUSHI", "7055031127", 81.3));
+  student h = {25, "Ayushi", "3423423", 90.4};
+  TEST_ASSERT_EQUAL(SUCCESS,insert(&h));
 }
 
+void test_DELETE(){
+  student h = {25, "Ayushi", "3423423", 90.4};
+  TEST_ASSERT_EQUAL(SUCCESS,Delete(&h));
+}
     
 
 
@@ -38,6 +42,8 @@ int main(void)
     RUN_TEST(test_DISPLAY);
     
     RUN_TEST(test_INSERT);
+
+    RUN_TEST(test_DELETE);
     
     /* Close the Unity Test Framework */
     return UNITY_END();

@@ -1,24 +1,35 @@
 #include "header.h"
-void update(int rollnumber)
+void update(student*h)
 {
-	
-    struct Student * temp = head;
-	while(temp!=NULL){
+	int roll;
+	student*p = h->next;
+	printf("Enter the Roll no. to find:");
+	scanf("%d", &roll);
+
+	while(p!=NULL){
 		
-		if(temp->rollnumber==rollnumber){
-			printf("Record with roll number %d Found !!!\n", rollnumber);
+		if (p->rollnumber != roll)
+		{
+			p = p->next;
+		}
+		else
+		{
+			printf("Record with roll number %d Found !!!\n", roll);
 			printf("Enter new name: ");
-			scanf("%s", temp->name);
+			scanf("%s", p->name);
 			printf("Enter new phone number: ");
-			scanf("%s", temp->phone);
+			scanf("%s", p->phone);
 			printf("Enter new percentage: ");
-			scanf("%f",&temp->percentage);
+			scanf("%f",&p->percentage);
 			printf("Updation Successful!!!\n");
 			return;
 		}
-		temp = temp->next;
 		
 	}
-	printf("Student with roll number %d is not found !!!\n", rollnumber);
+	
+	if (p == NULL)
+	{
+		printf("Not found! \n");
+	}
 	
 }

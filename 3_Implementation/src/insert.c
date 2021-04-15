@@ -1,28 +1,22 @@
-
-
-
 #include "header.h"
-error_t insert(int rollnumber, char* name, char* phone, float percentage)
+
+error_t insert(student*h)
 {
-	
-    struct Student * student = (struct Student *) malloc(sizeof(struct Student));
-	student->rollnumber = rollnumber;
-	strcpy(student->name, name);
-	strcpy(student->phone, phone);
-	student->percentage = percentage;
-	student->next = NULL;
-	
-	if(head==NULL){
-		// if head is NULL
-		// set student as the new head
-		head = student;
-	}
-	else{
-		// if list is not empty
-		// insert student in beginning of head
-		student->next = head;
-		head = student;
-	}
+	student*p;
+    p = (student*)malloc(sizeof(student));
+
+	printf("Roll no.:");
+	scanf("%s", &p->rollnumber);
+	printf("Name:");
+	scanf("%s", &p->name);
+	printf("Phone:");
+	scanf("%s", &p->phone);
+	printf("Percent:");
+	scanf("%f", &p->percentage);
+
+	p->next = h->next;
+	h->next = p;
+
 	return SUCCESS;
 	
 }
