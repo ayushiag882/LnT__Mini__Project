@@ -1,5 +1,7 @@
 #include"header.h"
-head  = NULL;
+
+
+struct Student *head=NULL;
 int main(){
 
  
