@@ -1,7 +1,14 @@
 #include"header.h"
 
-
-struct Student *head=NULL;
+extern struct Student
+{
+    int rollnumber;
+    char name[100];
+    char phone[100];
+    float percentage;
+    struct Student *next;
+    
+}* head=NULL;
 int main(){
 
  
