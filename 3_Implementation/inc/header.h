@@ -24,7 +24,8 @@ typedef enum error_t{
     INVALID_NAME=4,
     ID_EXISTS=5
 }error_t;
-extern struct Student
+
+struct Student
 {
     int rollnumber;
     char name[100];
