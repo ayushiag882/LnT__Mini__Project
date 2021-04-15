@@ -20,10 +20,7 @@ void test_DISPLAY(){
   TEST_ASSERT_EQUAL(SUCCESS,display());
 }
 
-void test_DELETE(){
- 
-  TEST_ASSERT_EQUAL(SUCCESS,Delete(67));
-}
+
 void test_INSERT(){
      
       TEST_ASSERT_EQUAL(SUCCESS,insert(67, "AYUSHI", "7055031127", 81.3));
@@ -39,7 +36,7 @@ int main(void)
 
     /* Run Test functions */
     RUN_TEST(test_DISPLAY);
-    RUN_TEST(test_DELETE);
+    
     RUN_TEST(test_INSERT);
     
     /* Close the Unity Test Framework */
