@@ -24,6 +24,7 @@ typedef enum error_t{
     INVALID_NAME=4,
     ID_EXISTS=5
 }error_t;
+
 typedef struct Student
 {
     int rollnumber;
@@ -32,9 +33,8 @@ typedef struct Student
     float percentage;
     struct Student *next;
     
-}Hoed;
+}*head;
 
-extern hoed *head;
 /**
  * @brief DELETE RECORD
  * 
