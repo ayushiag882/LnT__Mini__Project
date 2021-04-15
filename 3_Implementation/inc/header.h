@@ -15,6 +15,15 @@
  */
 #ifndef __HEADER_H__
 #define __HEADER_H__
+
+typedef enum error_t{
+	ERROR_NULL_PTR = -2,
+    SUCCESS = 0,
+    START_EXISTS=1,
+    NO_HEAD_EXIST=2,
+    INVALID_NAME=4,
+    ID_EXISTS=5
+}error_t;
 extern struct Student
 {
     int rollnumber;
@@ -24,14 +33,6 @@ extern struct Student
     struct Student *next;
     
 }* head;
-typedef enum error_t{
-	ERROR_NULL_PTR = -2,
-    SUCCESS = 0,
-    START_EXISTS=1,
-    NO_HEAD_EXIST=2,
-    INVALID_NAME=4,
-    ID_EXISTS=5
-}error_t;
 /**
  * @brief DELETE RECORD
  * 

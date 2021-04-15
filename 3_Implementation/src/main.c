@@ -1,6 +1,8 @@
 #include"header.h"
+head  = NULL;
 int main(){
- head  = NULL;
+
+ 
 
     int choice;
     char name[100];
