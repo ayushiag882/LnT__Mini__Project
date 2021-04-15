@@ -1,6 +1,6 @@
 #include"header.h"
 
-head=NULL;
+hoed *head=NULL;
 int main(){
 
  
