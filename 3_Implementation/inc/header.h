@@ -25,7 +25,7 @@ typedef enum error_t{
     ID_EXISTS=5
 }error_t;
 
-extern struct Student
+typedef struct Student
 {
     int rollnumber;
     char name[100];
@@ -33,7 +33,7 @@ extern struct Student
     float percentage;
     struct Student *next;
     
-}*head;
+}student;
 
 /**
  * @brief DELETE RECORD
@@ -41,13 +41,13 @@ extern struct Student
  * @param rollnumber 
  * @return error_t 
  */
-error_t Delete(int rollnumber);
+error_t Delete(student*h);
 /**
  * @brief DISPLAY RECORD
  * 
  * @return error_t 
  */
-error_t display();
+error_t display(student*h);
 /**
  * @brief INSERT RECORD
  * 
@@ -56,19 +56,19 @@ error_t display();
  * @param phone 
  * @param percentage 
  */
-error_t insert(int rollnumber, char* name, char* phone, float percentage);
+error_t insert(student*h);
 /**
  * @brief SEARCH RECORD
  * 
  * @param rollnumber 
  */
-void search(int rollnumber);
+void search(student*h);
 /**
  * @brief UPDATE RECORD
  * 
  * @param rollnumber 
  */
-void update(int rollnumber);
+void update(student*h);
 
 #endif
 

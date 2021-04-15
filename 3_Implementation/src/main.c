@@ -1,19 +1,5 @@
 #include"header.h"
 
-/*
-
-extern struct Student
-{
-    int rollnumber;
-    char name[100];
-    char phone[100];
-    float percentage;
-    struct Student *next;
-    
-}* head=NULL;
-
-*/
-
 int main(){
 
     int choice;
@@ -29,33 +15,19 @@ int main(){
         switch (choice)
         {
             case 1:
-                printf("Enter roll number: ");
-                scanf("%d", &rollnumber);
-                printf("Enter name: ");
-                scanf("%s", name);
-                printf("Enter phone number: ");
-                scanf("%s", phone);
-                printf("Enter percentage: ");
-                scanf("%f", &percentage);
-               insert(rollnumber, name, phone, percentage);
+                insert(NULL);
                 break;
             case 2:
-                printf("Enter roll number to search: ");
-                scanf("%d", &rollnumber);
-               search(rollnumber);
+                search(NULL);
                 break;
             case 3:
-                printf("Enter roll number to delete: ");
-                scanf("%d", &rollnumber);
-                 Delete(rollnumber);
+                Delete(NULL);
                 break;
             case 4:
-                printf("Enter roll number to update: ");
-                scanf("%d", &rollnumber);
-                update(rollnumber);
+                update(NULL);
                 break;
             case 5:
-                display();
+                display(NULL);
                 break;
         }
         
