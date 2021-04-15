@@ -33,7 +33,7 @@ extern struct Student
     float percentage;
     struct Student *next;
     
-}*head;
+}*head = NULL;
 
 /**
  * @brief DELETE RECORD
