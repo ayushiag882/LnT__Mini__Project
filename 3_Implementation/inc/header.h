@@ -1,7 +1,3 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include<string.h>
-
 
 /**
  * @file header.h
@@ -15,6 +11,11 @@
  */
 #ifndef __HEADER_H__
 #define __HEADER_H__
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+
 
 typedef enum error_t{
 	ERROR_NULL_PTR = -2,
