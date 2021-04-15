@@ -1,10 +1,7 @@
 #include"header.h"
 
-hoed *head=NULL;
 int main(){
-
- 
-
+    head=NULL;
     int choice;
     char name[100];
     char phone[100];
