@@ -36,7 +36,7 @@ struct Student
     
 };
 
-extern struct student *head;
+extern struct Student *head;
 /**
  * @brief DELETE RECORD
  * 
