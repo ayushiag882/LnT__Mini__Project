@@ -1,6 +1,6 @@
 #include"header.h"
 
-extern struct Student
+struct Student
 {
     int rollnumber;
     char name[100];
