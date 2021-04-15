@@ -1,7 +1,7 @@
 #include"header.h"
 
 int main(){
-    struct Student *head=NULL;
+    head=NULL;
     int choice;
     char name[100];
     char phone[100];
