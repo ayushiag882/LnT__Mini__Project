@@ -25,7 +25,7 @@ typedef enum error_t{
     ID_EXISTS=5
 }error_t;
 
-struct Student
+extern struct Student
 {
     int rollnumber;
     char name[100];
@@ -33,7 +33,7 @@ struct Student
     float percentage;
     struct Student *next;
     
-}head;
+}*head;
 
 /**
  * @brief DELETE RECORD

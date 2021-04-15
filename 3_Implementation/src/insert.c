@@ -1,7 +1,5 @@
-
-
-
 #include "header.h"
+
 error_t insert(int rollnumber, char* name, char* phone, float percentage)
 {
 	
